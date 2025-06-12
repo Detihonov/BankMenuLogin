@@ -47,7 +47,7 @@ namespace BankLoginMenu
 
                     switch (mainMenuChoice)
                     {
-                        case 1: break;
+                        case 1: CustomersMenu(); break;
                         case 2: break;
                         case 3: break;
                         case 4: break;
@@ -64,6 +64,25 @@ namespace BankLoginMenu
 
                 // about to exit
             Console.WriteLine("Thank you! Visit again.");
+        }
+
+        static void CustomersMenu()
+        {
+            // variable to store customers menu choice
+            int customerMenuChoice = -1;
+            do
+            {
+                Console.WriteLine("\n::Customers menu::");
+                Console.WriteLine("1.Add Customer");
+                Console.WriteLine("2.Delete Customer");
+                Console.WriteLine("3.Upadate Customer");
+                Console.WriteLine("4.View Customers");
+                Console.WriteLine("0.Back to Main Menu");
+
+                // accept customers menu choice
+                Console.Write("Enter choice: ");
+                customerMenuChoice = Convert.ToInt32(Console.ReadLine());
+            } while (customerMenuChoice != 0);
         }
     }
 }
